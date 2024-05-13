@@ -1,0 +1,32 @@
+#Create Product
+POST http://localhost:9000/products
+
+Content-Type: application/json
+    {
+        "name": "Kajal Art",
+        "sku": "kajal_art",
+        "orders": [
+            {
+                "id": "baloon",
+                "quantity": 10,
+                "price": 100
+            },
+            {
+                "id": "frill",
+                "quantity": 10,
+                "price": 100
+            }
+        ]
+    }
+
+### Get products
+GET http://localhost:9000/products
+Content-Type: application/json
+
+### Update Stock
+PATCH http://localhost:9000/products/2
+Content-Type: application/json
+
+    {
+        "stock": 50
+    }
